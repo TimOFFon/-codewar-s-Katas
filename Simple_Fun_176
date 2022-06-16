@@ -1,0 +1,29 @@
+// https://www.codewars.com/kata/58b8c94b7df3f116eb00005b/train/javascript
+// 7 kyu Simple Fun #176: Reverse Letter
+
+/**
+ * Дана строка str, инвертировать ее, опуская все неалфавитные
+ * символы.
+ * Строка состоит из строчных латинских букв, цифр и символов.
+ * 
+ * "krishan" => "nahsirk"
+ * "ultr53o?n" => "nortlu"
+ */
+
+// let str1 = 'krishan'; // "nahsirk"
+// let str2 = 'ultr53o?n'; //"nortlu"
+// let str3 = 'ab23c'; // "cba"
+// let str4 = 'krish21an'; //"nahsirk"
+
+function invertStr(str) {
+    let workArr = str.split('').reverse();
+    let result = [];
+    workArr.forEach(element => {
+        if(element.match(/[a-z]/i)) {
+            result.push(element);
+        };
+    });
+    return result.join('')
+};
+
+// console.log(invertStr(str1));
