@@ -1,0 +1,46 @@
+//https://www.codewars.com/kata/57eba158e8ca2c8aba0002a0/train/javascript
+
+//7 kyu Sort by Last Char
+
+/**
+ * Учитывая строку слов (x), вам нужно вернуть массив слов
+ * отсортированных в алфавитном порядке по последнему символу в
+ * каждом.
+ * 
+ * Если два слова имеют одинаковую последнюю букву, возвращаемый
+ * ими массив должен отображать их в том порядке, в котором они
+ * появились в данной строке.
+ * 
+ * 'man i need a taxi up to ubud' => ['a', 'need', 'ubud', 'i',
+ * 'taxi', 'man', 'to', 'up']
+ * 
+ * 'what time are we climbing up the volcano'=> ['time', 'are',
+ * 'we', 'the', 'climbing', 'volcano', 'up', 'what']
+ * 
+ * 'take me to semynak' => ['take', 'me', 'semynak', 'to']
+ */
+
+// let str1 = 'man i need a taxi up to ubud';
+// let str2 = 'what time are we climbing up the volcano';
+// let str3 = 'take me to semynak';
+
+function splitingStrInArr(str) {
+    let workArr = str.split(' ');
+    workArr.sort((a, b) => {
+        if(a[a.length - 1] > b[b.length - 1]) {
+            return 1;
+        }; 
+
+        if(a[a.length - 1] === b[b.length - 1]) {
+            return 0;
+        }
+
+        return -1;
+    });
+    return workArr;
+};
+
+// console.log(splitingStrInArr(str1));
+/**
+ * alternative - String.prototype.localeCompare()
+ */
