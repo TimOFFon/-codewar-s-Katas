@@ -1,0 +1,29 @@
+// https://www.codewars.com/kata/57cfdf34902f6ba3d300001e/train/javascript
+//8 kyu Sort and Star
+/**
+ * Вам будет дан вектор строк. Вы должны отсортировать его
+ * алфавитном порядке (с учетом регистра и на основе значений
+ * символов ASCII), а затем вернуть первое значение.
+ * 
+ * Возвращаемое значение должно быть строкой и иметь «***» между
+ * каждой буквой.
+ * 
+ * Вы не должны удалять или добавлять элементы из/в массив.
+ * 
+ * ["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"] => 'b***i***t***c***o***i***n'
+ * 
+ * ["turns", "out", "random", "test", "cases", "are", "easier", "than", "writing", "out", "basic", "ones"] => 'a***r***e'
+ */
+
+// let arrStr1 = ["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"];
+
+// let arrStr2 = ["turns", "out", "random", "test", "cases", "are", "easier", "than", "writing", "out", "basic", "ones"];
+
+
+
+function sortingString(arr) {
+    return arr.sort()[0].split('').join('***');
+};
+
+// console.log(sortingString(arrStr1));
+// console.log(sortingString(arrStr2));
