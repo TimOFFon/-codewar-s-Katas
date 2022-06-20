@@ -1,0 +1,33 @@
+//https://www.codewars.com/kata/5732b0351eb838d03300101d/train/javascript
+/**
+ * Функция принимает 1 параметр arr (числовой массив).
+ * 
+ * Если arr не является массивом, функция должна вернуть:
+ * "It's a fake array"
+ * 
+ * Если arr содержит элементы 5 и 13, функция должна вернуть:
+ * "It's a black array"
+ * 
+ * Если arr не содержит ни 5, ни 13, функция должна вернуть:
+ * "It's a white array"
+ * 
+ * 5,13 => "It's a fake array"
+ * [5,13] => "It's a black array"
+ * [5,12] => "It's a white array" 
+ * 
+ * Использование строкового шаблона и тернарного оператора может
+ * облегчить вашу работу.
+ */
+
+let value1_a = 5, value1_b = 13;
+let value2 = [5,13];
+let value3 = [5,12];
+
+function blackAndWhite(arr){
+
+    return !Array.isArray(arr) ? `It's a fake array` :  (arr.indexOf(5) !== -1 && arr.indexOf(13) !== -1) ? `It's a black array` : `It's a white array`;
+};
+
+console.log(blackAndWhite(value1_a, value1_b));
+console.log(blackAndWhite(value2));
+console.log(blackAndWhite(value3));
